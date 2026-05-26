@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ArchiCalc Guide by Bilik Arsitektur Enggan Ngarsi</title>
+    <meta
+      name="description"
+      content="ArchiCalc Guide adalah aplikasi kalkulator dan panduan arsitektur untuk ruang, skala, zonasi, struktur konseptual, material, dan RAB."
+    />
+    <style>
+      :root {
+        --cream: #f8f1e8;
+        --paper: #fffaf2;
+        --olive: #3f4030;
+        --ink: #2d3024;
+        --clay: #c9784e;
+        --tan: #d8ad8a;
+        --muted: #746a5c;
+        --line: #dfd1be;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--cream);
+        color: var(--olive);
+      }
+
+      a { color: inherit; }
+
+      .wrap {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 250, 242, 0.82);
+        backdrop-filter: blur(16px);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+
+      nav {
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--olive);
+        color: var(--paper);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 650;
+      }
+
+      .hero {
+        min-height: calc(100vh - 72px);
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 56px;
+        align-items: center;
+        padding: 52px 0 42px;
+      }
+
+      .logo {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+        box-shadow: 0 18px 44px rgba(63, 64, 48, 0.12);
+      }
+
+      .eyebrow {
+        color: var(--clay);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 12px;
+      }
+
+      h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(42px, 7vw, 82px);
+        line-height: 0.96;
+        margin: 14px 0 18px;
+        color: var(--ink);
+        font-weight: 500;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.7;
+        max-width: 650px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 18px;
+        border-radius: 8px;
+        border: 1px solid var(--olive);
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      .primary {
+        background: var(--olive);
+        color: var(--paper);
+      }
+
+      .secondary {
+        color: var(--olive);
+        background: rgba(255, 250, 242, 0.5);
+      }
+
+      section {
+        padding: 44px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0 0 18px;
+        font-size: 28px;
+        color: var(--ink);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        color: var(--ink);
+      }
+
+      .card p,
+      .note {
+        color: var(--muted);
+        line-height: 1.65;
+        margin: 0;
+      }
+
+      footer {
+        padding: 30px 0 44px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 800px) {
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 28px;
+          min-height: auto;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .links {
+          gap: 10px;
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="wrap">
+        <div class="brand">
+          <div class="mark">AC</div>
+          <span>ArchiCalc Guide</span>
+        </div>
+        <div class="links">
+          <a href="#fitur">Fitur</a>
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="app-ads.txt">app-ads.txt</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="wrap hero">
+        <img class="logo" src="logo.png" alt="Logo Bilik Arsitektur Enggan Ngarsi" />
+        <div>
+          <div class="eyebrow">Bilik Arsitektur Enggan Ngarsi</div>
+          <h1>ArchiCalc Guide</h1>
+          <p class="lead">
+            Aplikasi kalkulator arsitektur untuk studi awal ruang, skala gambar, zonasi, tangga,
+            ramp, struktur konseptual, kuantitas material, RAB, dan referensi ergonomi.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="downloads/ArchiCalc-Guide-Bilik-Arsitektur.apk" download>Download APK</a>
+            <a class="button secondary" href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <section id="fitur">
+        <div class="wrap">
+          <h2>Fitur Utama</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>Ruang & Fungsi</h3>
+              <p>Hitung luas ruang, okupansi, allowance sirkulasi, dan rasio net-to-gross.</p>
+            </article>
+            <article class="card">
+              <h3>Skala & Zonasi</h3>
+              <p>Konversi skala/unit serta hitung KDB, KLB, KDH, dan data tapak awal.</p>
+            </article>
+            <article class="card">
+              <h3>Struktur & RAB</h3>
+              <p>Estimasi konseptual balok, kolom, pondasi, kuantitas material, dan biaya awal.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>Catatan</h2>
+          <p class="note">
+            ArchiCalc Guide adalah alat bantu perhitungan awal. Hasil aplikasi bukan pengganti
+            persetujuan pemerintah daerah, desain struktur, desain MEP, atau perhitungan profesional.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        © 2026 Bilik Arsitektur Enggan Ngarsi. Contact: bilikarsitektur@example.com
+      </div>
+    </footer>
+  </body>
+</html>
